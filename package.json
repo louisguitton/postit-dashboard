@@ -1,0 +1,9 @@
+{
+   "name": "GroupKeep",
+   "description": "Collaborative post it board",
+   "author": "lg",
+   "dependencies" : {
+      "express": "4.x",
+      "socket.io": "*"
+   }
+}
