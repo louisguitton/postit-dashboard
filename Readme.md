@@ -9,3 +9,10 @@ npm install
 node server.js
 open http://localhost:8080
 ```
+
+or
+
+```sh
+docker build -t postit
+docker run -it -p 8080:8080 postit
+```
