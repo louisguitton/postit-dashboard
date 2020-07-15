@@ -16,3 +16,10 @@ or
 docker build -t postit
 docker run -it -p 8080:8080 postit
 ```
+
+or from [Docker Hub](https://hub.docker.com/r/louisguitton/postit-dashboard)
+
+```sh
+docker pull louisguitton/postit-dashboard
+docker run -it -p 8080:8080 louisguitton/postit-dashboard
+```
