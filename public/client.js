@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  var board = document.getElementById("board");
-  var width = window.innerWidth;
-  var height = window.innerHeight;
   var socket = io.connect();
 
   $("#board form").submit(function (e) {
