@@ -1,17 +1,15 @@
-var express = require("express"),
-  app = express(),
-  http = require("http"),
-  socketIo = require("socket.io");
-const PORT = process.env.PORT || 8080
+const express = require("express");
+const path = require("path");
+const socketIo = require("socket.io");
+const PORT = process.env.PORT || 8080;
 
-// start webserver on port 8080
-var server = http.createServer(app);
-var io = socketIo.listen(server);
-server.listen(PORT);
-// add directory with our static files
-app.use(express.static(__dirname + "/public"));
+var app = express()
+  .use(express.static(path.join(__dirname, "public")))
+  .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
-// array of all lines drawn
+var io = socketIo.listen(app);
+
+// array of all postits
 var postit_history = [];
 
 // event-handler for new incoming connections
